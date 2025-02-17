@@ -1,0 +1,193 @@
+/* Stilizează întregul corp al paginii */
+body {
+    background: linear-gradient(to right, #1e1e1e, #444, #777); /* Gradient urban gri */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Text alb pentru contrast */
+    font-family: 'Calibri', sans-serif; /* Fontul ales pentru site */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Aliniază conținutul în partea de sus */
+    height: 100vh;
+}
+/* Stilizare pentru meniu și logo */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Containerul pentru logo */
+nav .logo-container {
+    padding-left: 20px;
+    cursor: pointer; /* Setează cursorul la pointer pe logo */
+}
+
+/* Logo-ul */
+nav .menu-logo {
+    height: 50px;
+}
+
+/* Meniul dropdown este ascuns inițial */
+nav .dropdown-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none; /* Meniul este ascuns la început */
+    position: absolute;
+    top: 100%; /* Meniul apare imediat sub logo */
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Fără fundal */
+    padding: 0;
+    transition: opacity 0.3s ease, max-height 0.3s ease; /* Adăugăm efect de tranziție */
+    max-height: 0;
+    overflow: hidden; /* Ascunde orice depășire */
+}
+
+/* Când checkbox-ul este activat, meniul devine vizibil */
+nav .menu-toggle:checked + .logo-container + .dropdown-menu {
+    display: block;
+    opacity: 1;
+    max-height: 500px; /* Setăm o înălțime maximă pentru meniu */
+}
+
+/* Stiluri pentru linkuri din meniu */
+nav .dropdown-menu li {
+    margin: 0;
+    padding: 10px 20px;
+}
+
+/* Linkurile din meniu */
+nav .dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+/* Modificare pentru hover */
+nav .dropdown-menu li a:hover {
+    color: #ffb2e7; /* Culoare la hover (roz deschis) */
+}
+
+/* Ascundem checkbox-ul (nu este necesar să-l afișăm pe pagină) */
+nav .menu-toggle {
+    display: none;
+}
+
+/* Restul stilurilor pentru pagina ta */
+body {
+    background: linear-gradient(to right, #1e1e1e, #444, #777); /* Gradient urban gri */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: 'Calibri', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Stiluri pentru meniul de navigare */
+nav ul {
+    list-style-type: none; /* Elimină punctele de la listă */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Elementele sunt acum afișate pe verticală */
+    margin-bottom: 10px; /* Spațiu între linkuri */
+}
+
+/* Stilizare pentru titluri și paragrafe */
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+/* Listă de ghete */
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    margin: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* Imagini pentru fiecare model de ghete */
+img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Umbre pentru imagini */
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+}
+
+img:hover {
+    transform: scale(1.05); /* Mărirea imaginii la hover */
+}
+
+/* Stiluri pentru secțiunea de descriere a ghetei */
+li p {
+    font-size: 16px;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Îmbunătățirea aspectului în mod responsive */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    ul li {
+        font-size: 18px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
