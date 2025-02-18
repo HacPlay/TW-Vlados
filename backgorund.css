@@ -1,193 +1,138 @@
-/* Stilizează întregul corp al paginii */
+/* Stilizarea întregului corp */
 body {
     background: linear-gradient(to right, #1e1e1e, #444, #777); /* Gradient urban gri */
-    background-size: cover;
-    background-position: center;
-    color: white; /* Text alb pentru contrast */
-    font-family: 'Calibri', sans-serif; /* Fontul ales pentru site */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* Aliniază conținutul în partea de sus */
-    height: 100vh;
-}
-/* Stilizare pentru meniu și logo */
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 0;
-    display: flex;
-    align-items: center;
-    z-index: 1000;
-}
-
-/* Containerul pentru logo */
-nav .logo-container {
-    padding-left: 20px;
-    cursor: pointer; /* Setează cursorul la pointer pe logo */
-}
-
-/* Logo-ul */
-nav .menu-logo {
-    height: 50px;
-}
-
-/* Meniul dropdown este ascuns inițial */
-nav .dropdown-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: none; /* Meniul este ascuns la început */
-    position: absolute;
-    top: 100%; /* Meniul apare imediat sub logo */
-    left: 0;
-    width: 100%;
-    background-color: transparent; /* Fără fundal */
-    padding: 0;
-    transition: opacity 0.3s ease, max-height 0.3s ease; /* Adăugăm efect de tranziție */
-    max-height: 0;
-    overflow: hidden; /* Ascunde orice depășire */
-}
-
-/* Când checkbox-ul este activat, meniul devine vizibil */
-nav .menu-toggle:checked + .logo-container + .dropdown-menu {
-    display: block;
-    opacity: 1;
-    max-height: 500px; /* Setăm o înălțime maximă pentru meniu */
-}
-
-/* Stiluri pentru linkuri din meniu */
-nav .dropdown-menu li {
-    margin: 0;
-    padding: 10px 20px;
-}
-
-/* Linkurile din meniu */
-nav .dropdown-menu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-}
-
-/* Modificare pentru hover */
-nav .dropdown-menu li a:hover {
-    color: #ffb2e7; /* Culoare la hover (roz deschis) */
-}
-
-/* Ascundem checkbox-ul (nu este necesar să-l afișăm pe pagină) */
-nav .menu-toggle {
-    display: none;
-}
-
-/* Restul stilurilor pentru pagina ta */
-body {
-    background: linear-gradient(to right, #1e1e1e, #444, #777); /* Gradient urban gri */
-    background-size: cover;
-    background-position: center;
     color: white;
     font-family: 'Calibri', sans-serif;
     margin: 0;
     padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: row; /* Permite alinierea pe orizontală */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Meniul de navigare */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1000;
+    width: 200px; /* Lățimea meniului */
+    height: 100vh; /* Întreaga înălțime a paginii */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-/* Stiluri pentru meniul de navigare */
-nav ul {
-    list-style-type: none; /* Elimină punctele de la listă */
+/* Container pentru logo și meniu */
+.menu-container {
+    position: relative;
+}
+
+/* Logo-ul - Dimensiune mai mică */
+.menu-logo img {
+    width: 75px; /* Mărimea logo-ului */
+    height: auto;
+    cursor: pointer;
+}
+
+/* Ascundem checkbox-ul */
+.menu-toggle {
+    display: none; /* Ascunde complet checkbox-ul */
+}
+
+/* Meniul dropdown */
+.dropdown-menu {
+    display: none; /* Inițial ascuns */
+    list-style-type: none;
     margin: 0;
     padding: 0;
+    background-color: #333; /* Fundalul meniului */
+    position: absolute;
+    top: 75px; /* Meniul apare sub logo */
+    left: 0;
+    width: 100%; /* Meniul va ocupa 100% din lățimea meniului */
+    text-align: left;
+    box-sizing: border-box; /* Asigură că padding-ul nu mărește dimensiunea meniului */
 }
 
-nav ul li {
-    display: inline-block; /* Elementele sunt acum afișate pe verticală */
-    margin-bottom: 10px; /* Spațiu între linkuri */
+/* Când checkbox-ul este activat (adică atunci când se dă click pe logo) */
+.menu-toggle:checked + .menu-logo + .dropdown-menu {
+    display: block; /* Meniul devine vizibil când se face click pe logo */
 }
 
-/* Stilizare pentru titluri și paragrafe */
-h1, h2 {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #fff;
+/* Adaugă padding pentru a face meniul mai lat și mai stilizat */
+.dropdown-menu li {
+    padding: 15px 0; /* Mărim padding-ul pentru a crea mai mult spațiu pe verticală */
+    background-color: #0000003f; /* Fundal pentru linkuri */
+    width: 100%; /* Asigură că elementele de listă sunt la fel de late ca meniul */
 }
 
-h2 {
-    font-size: 28px;
-    font-weight: normal;
-}
-
-p {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 20px;
-    max-width: 800px;
-}
-
-/* Listă de ghete */
-ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-ul li {
-    margin: 20px;
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-/* Imagini pentru fiecare model de ghete */
-img {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Umbre pentru imagini */
-    transition: transform 0.3s ease;
-    margin-top: 10px;
-}
-
-img:hover {
-    transform: scale(1.05); /* Mărirea imaginii la hover */
-}
-
-/* Stiluri pentru secțiunea de descriere a ghetei */
-li p {
+/* Linkuri din meniu */
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
     font-size: 16px;
-    font-weight: normal;
-    color: rgba(255, 255, 255, 0.8);
-    margin-top: 10px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+    padding: 10px 20px; /* Adaugă padding pentru linkuri pentru un efect mai frumos */
+    text-align: left; /* Centrează textul în interiorul fiecărui link */
 }
 
-/* Îmbunătățirea aspectului în mod responsive */
+/* Hover pe linkuri */
+.dropdown-menu li a:hover {
+    background-color: #ffb2e7; /* Culoare la hover */
+}
+
+/* Containerele pentru titlu și text */
+.content {
+    margin-left: 150px; /* Permitem textului să înceapă după meniu */
+    width: calc(100% - 220px); /* Lățimea pentru a nu se suprapune cu meniul */
+    margin-top: 10; /* Distanțare de sus */
+}
+
+/* Titlul - va fi separat de text */
+.content h1 {
+    font-size: 36px;
+    font-family: 'Arial', sans-serif;
+    text-align: center; /* Titlul va fi centrat */
+    margin-bottom: 20px; /* Distanțare între titlu și text */
+    margin-left: -150px;
+}
+
+/* Textul - separat sub titlu */
+.content p {
+    font-size: 18px;
+    max-width: 1000px;
+    margin: 20px auto; /* Aliniere la stânga și centrare pe pagină */
+    text-align: left; /* Textul va fi aliniat la stânga */
+    margin-left: 10px;
+}
+
+
+/* Responsivitate pentru dispozitive mobile */
 @media screen and (max-width: 768px) {
-    h1 {
-        font-size: 30px;
+    body {
+        flex-direction: column; /* Pe mobile vom face layoutul pe verticală */
     }
 
-    h2 {
-        font-size: 24px;
+    nav {
+        width: 100%; /* Meniul se va întinde pe întreaga lățime a paginii pe mobile */
+        height: auto;
     }
 
-    p {
-        font-size: 16px;
+    .content {
+        margin-left: 0; /* Pe mobile, textul va începe de la marginea stângă */
+        width: 100%; /* Lățimea va fi completă pe mobil */
     }
 
-    ul li {
-        font-size: 18px;
+    .content h1 {
+        font-size: 30px; /* Micșorăm fontul pentru mobile */
     }
 
-    img {
-        width: 100%;
+    .content p {
+        font-size: 16px; /* Micșorăm fontul pentru mobile */
     }
 }
