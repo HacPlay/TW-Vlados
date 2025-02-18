@@ -110,6 +110,51 @@ nav {
     text-align: left; /* Textul va fi aliniat la stânga */
     margin-left: 10px;
 }
+/* Container pentru text și imaginea principală */
+.company-main {
+    display: flex;
+    align-items: center;  /* Aliniere verticală a textului și imaginii */
+    gap: 20px;  /* Spațiu între text și imagine */
+    margin-top: 50px; /* Distanțare deasupra */
+}
+
+.company-text {
+    margin-left: 220px; /* Permitem textului să înceapă după meniu */
+    width: calc(100% - 220px); /* Lățimea pentru a nu se suprapune cu meniul */
+    margin-top: 100px; /* Distanțare de sus */
+    text-align: left; /* Alinierea textului la stânga */
+}
+
+
+/* Imaginea principală */
+.company-image img {
+    width: 250px; /* Mărimea imaginii */
+    height: auto;
+}
+
+/* Stilizare pentru galeria de imagini */
+.company-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Două imagini pe rând */
+    gap: 20px;
+    justify-items: center; /* Centrare pe orizontală */
+    margin-top: 40px; /* Distanțare față de textul companiei */
+}
+
+/* Imaginile din galerie */
+.company-gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Umbră pentru efect de stil */
+    transition: transform 0.3s ease;
+}
+
+/* Efectul la hover pe imagini */
+.company-gallery img:hover {
+    transform: scale(1.05);
+}
 
 
 /* Responsivitate pentru dispozitive mobile */
