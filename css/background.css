@@ -1,0 +1,79 @@
+body {
+    background: linear-gradient(to right, #333, #666);
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: black;
+    padding: 15px 0;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.menu-logo img {
+    width: 50px;
+    height: auto;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.menu-list li a:hover {
+    background: #9502b9;
+    border-radius: 5px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.company-text {
+    width: 60%;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Responsivitate pentru mobil */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .content h1 {
+        font-size: 30px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+}

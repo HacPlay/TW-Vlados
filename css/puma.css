@@ -1,0 +1,111 @@
+
+body {
+    background: linear-gradient(to right, #333, #666);
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background: black;
+    padding: 15px 0;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.menu-logo img {
+    width: 50px;
+    height: auto;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.menu-list li a:hover {
+    background: #9502b9;
+    border-radius: 5px;
+}
+
+/* Conținutul principal */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* Text despre Puma */
+.company-text {
+    width: 60%;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Imagine Puma */
+.company-image {
+    width: 35%;
+    text-align: left;
+}
+
+.company-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Galerie produse */
+.company-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    width: 60%;
+    margin: 50px auto 0 auto;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
