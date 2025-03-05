@@ -1,11 +1,40 @@
+/* Stilizarea pentru body */
 body {
-    background: linear-gradient(to right, #333, #666);
     font-family: Arial, sans-serif;
-    color: white;
     margin: 0;
     padding: 0;
+    transition: background 0.3s, color 0.3s;
+    background: linear-gradient(to right, #ffffff, #ffcdcd);
+    color: black;
 }
 
+body.dark-mode {
+    background: linear-gradient(to right, #222, #555); 
+    color: white;
+}
+
+/* Stilizare pentru Slider */
+.image-slider {
+    width: 50%; /* Aduce sliderul într-o proporție de 50% din lățimea containerului */
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin: 30px auto; /* Centrarea sliderului pe pagină */
+}
+
+.image-slider-container {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.image-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; /* Asigură că imaginile vor fi afișate câte una */
+}
+
+/* Navbar */
 nav {
     background: black;
     padding: 15px 0;
@@ -17,6 +46,7 @@ nav {
     justify-content: space-between;
     width: 90%;
     margin: auto;
+    position: relative;
 }
 
 .menu-logo img {
@@ -47,6 +77,25 @@ nav {
     border-radius: 5px;
 }
 
+/* Buton schimbare temă */
+#theme-toggle {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+#theme-toggle:hover {
+    background: white;
+    color: black;
+}
+
+/* Containerul principal care include textul și sliderul */
 .content-container {
     display: flex;
     justify-content: space-between;
@@ -55,25 +104,56 @@ nav {
     margin: 20px auto;
 }
 
+/* Textul companiei - va ocupa 60% din lățimea containerului */
 .company-text {
     width: 60%;
     font-size: 18px;
     line-height: 1.5;
 }
 
-/* Responsivitate pentru mobil */
+/* Sliderul de imagini - va ocupa 35% din lățimea containerului */
+.image-slider {
+    width: 35%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 30px; /* Adăugăm un mic spațiu în sus pentru a separa sliderul de text */
+}
+
+/* Containerul de imagini pentru slider */
+.image-slider-container {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.image-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Media Queries pentru mobil - sliderul va ocupa întreaga lățime pe mobil */
 @media (max-width: 768px) {
     .content-container {
         flex-direction: column;
-        height: auto;
-        padding: 20px;
+        align-items: center;
     }
 
-    .content h1 {
-        font-size: 30px;
+    .company-text {
+        width: 100%;
+        text-align: center;
     }
 
-    .content p {
-        font-size: 18px;
+    .image-slider {
+        width: 100%; /* Sliderul va ocupa 100% din lățimea containerului pe mobil */
+        height: 300px; /* Poți ajusta dimensiunea sliderului pe mobil */
+        margin-top: 20px;
     }
 }
+
+
+
+
+
+
