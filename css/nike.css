@@ -85,6 +85,7 @@ nav {
 }
 
 
+/* Galerie de imagini */
 .company-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -107,15 +108,22 @@ nav {
 
 .gallery-item img:hover {
     transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-
 .gallery-item p {
     margin-top: 10px;
     font-size: 16px;
-    color: white;
     font-weight: bold;
+    transition: color 0.3s;
 }
+body.dark-mode .gallery-item p {
+    color: white;
+}
+
+body:not(.dark-mode) .gallery-item p {
+    color: black;
+}
+
 
 #theme-toggle {
     background: none;

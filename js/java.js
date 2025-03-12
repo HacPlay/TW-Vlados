@@ -31,20 +31,24 @@ function stickyMenu() {
         menu.classList.remove("sticky");
     }
 }
-// Setează intervalul pentru schimbarea imaginii (3 secunde)
-let currentIndex = 0;
+// Script pentru slider
+let currentIndex = 0; // Indexul imaginii curente
+const images = document.querySelectorAll('.image-slider-container img'); // Selectăm toate imaginile din slider
+const totalImages = images.length; // Obținem numărul total de imagini
 
-const images = document.querySelectorAll('.image-slider img');
-const totalImages = images.length;
-
-// Functia pentru schimbarea imaginii
+// Funcția pentru schimbarea imaginii
 function changeImage() {
-    const sliderContainer = document.querySelector('.image-slider-container');
-    currentIndex = (currentIndex + 1) % totalImages;  // Mergi la imaginea următoare
+    // Calculăm poziția următoarei imagini
+    currentIndex++;
+    if (currentIndex >= totalImages) {
+        currentIndex = 0; // Dacă am ajuns la ultima imagine, revenim la prima
+    }
 
-    // Schimbă poziția containerului pentru a arăta imaginea următoare
-    sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    // Mergem la următoarea imagine
+    document.querySelector('.image-slider-container').style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-// Schimbă imaginea la fiecare 3 secunde
+// Setăm un interval de 3 secunde pentru a schimba imaginea
 setInterval(changeImage, 3000);
+
+
