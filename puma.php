@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puma - Ghetele Performante</title>
-    <link rel="stylesheet" href="C:\Users\ADMIN\OneDrive\Desktop\TW-Vlados\TW-Vlados\css\puma.css">
+    <link rel="stylesheet" href="css\puma.css">
 </head>
 </header>
 <body>
     <nav>
         <div class="menu-container">
             <div class="menu-logo">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="https://avatars.mds.yandex.net/i?id=2294261ab123758c4348dfc628096761dbe3fd9a-9223201-images-thumbs&n=13" alt="Logo">
                 </a>
             </div>
             <ul class="menu-list">
-                <li><a href="index.html">Acasă</a></li>
-                <li><a href="nike.html">Nike</a></li>
-                <li><a href="adidas.html">Adidas</a></li>
-                <li><a href="puma.html">Puma</a></li>
-                <li><a href="reebok.html">Reebok</a></li>
-                <li><a href="new_balance.html">New Balance</a></li>
+                <li><a href="index.php">Acasă</a></li>
+                <li><a href="nike.php">Nike</a></li>
+                <li><a href="adidas.php">Adidas</a></li>
+                <li><a href="puma.php">Puma</a></li>
+                <li><a href="reebok.php">Reebok</a></li>
+                <li><a href="new_balance.php">New Balance</a></li>
             </ul>
+            <a href="register-page.php" class="btn-inregistrare">Înregistrează-te</a>
             <button id="theme-toggle">🌙 Schimbă Tema</button>
         </div>
     </nav> 
@@ -67,6 +68,6 @@
             <p>Puma Speedcat</p>
         </div>
     </div>
-    <script src="C:\Users\ADMIN\OneDrive\Desktop\TW-Vlados\TW-Vlados\js\puma.js"></script>
+    <script src="js\puma.js"></script>
 </body>
 </html>

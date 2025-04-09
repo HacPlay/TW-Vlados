@@ -139,11 +139,24 @@ body:not(.dark-mode) .gallery-item p {
     background: white;
     color: black;
 }
+.btn-inregistrare {
+    display: inline-block;
+    background: #ff4500;
+    color: rgb(56, 21, 21);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-inregistrare:hover {
+    background: #3b1102;
+}
 .sticky {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
 }
-
 

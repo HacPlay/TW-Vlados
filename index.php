@@ -1,30 +1,42 @@
-<!DOCTYPE html>
+<?php session_start(); ?>
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enciclopedia Ghetelor</title>
-    <link rel="stylesheet" href="C:\Users\ADMIN\OneDrive\Desktop\TW-Vlados\TW-Vlados\css\background.css">
+    <link rel="stylesheet" href="css/background.css">
 </head>
 <body>
     <nav>
         <div class="menu-container">
             <div class="menu-logo">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="https://avatars.mds.yandex.net/i?id=2294261ab123758c4348dfc628096761dbe3fd9a-9223201-images-thumbs&n=13" alt="Logo">
                 </a>
             </div>
             <ul class="menu-list">
-                <li><a href="index.html">Acasă</a></li>
-                <li><a href="nike.html">Nike</a></li>
-                <li><a href="adidas.html">Adidas</a></li>
-                <li><a href="puma.html">Puma</a></li>
-                <li><a href="reebok.html">Reebok</a></li>
-                <li><a href="new_balance.html">New Balance</a></li>
+                <li><a href="index.php">Acasă</a></li>
+                <li><a href="nike.php">Nike</a></li>
+                <li><a href="adidas.php">Adidas</a></li>
+                <li><a href="puma.php">Puma</a></li>
+                <li><a href="reebok.php">Reebok</a></li>
+                <li><a href="new_balance.php">New Balance</a></li>
             </ul>
+
+            <?php if (isset($_SESSION["username"])): ?>
+                <span style="color:white; margin-left: 10px;">
+                    Salut, <?= htmlspecialchars($_SESSION["username"]) ?>!
+                </span>
+                <a href="logout.php" class="btn-inregistrare">Delogare</a>
+            <?php else: ?>
+                <a href="login-page.php" class="btn-inregistrare">Autentificare</a>
+                <a href="register-page.php" class="btn-inregistrare">Înregistrează-te</a>
+            <?php endif; ?>
+
             <button id="theme-toggle">🌙 Schimbă Tema</button>
         </div>
     </nav>
+
     <div class="content-container">
         <div class="company-text">
             <h1>Enciclopedia Ghetelor</h1>
@@ -43,6 +55,6 @@
             </div>
         </div>        
     </div>
-    <script src="C:\Users\ADMIN\OneDrive\Desktop\TW-Vlados\TW-Vlados\js\java.js"></script>
+    <script src="js\java.js"></script>
 </body>
 </html>
