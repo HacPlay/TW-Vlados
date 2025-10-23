@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+body {
+    background: linear-gradient(to right, #ffffff, #ffcdcd);
+    color: black;
+    transition: background 0.3s, color 0.3s;
+}
+body.dark-mode {
+    background: linear-gradient(to right, #222, #555); 
+    color: white;
+}
+
+nav {
+    background: black;
+    padding: 15px 0;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.menu-logo img {
+    width: 50px;
+    height: auto;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.menu-list li a:hover {
+    background: #9502b9;
+    border-radius: 5px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.company-text {
+    width: 60%;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.company-image {
+    width: 35%;
+    text-align: left;
+}
+
+.company-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Galerie de imagini */
+.company-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    width: 60%;
+    margin: 50px auto 0 auto;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+body.dark-mode .gallery-item p {
+    color: white;
+}
+
+body:not(.dark-mode) .gallery-item p {
+    color: black;
+}
+
+#theme-toggle {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+#theme-toggle:hover {
+    background: white;
+    color: black;
+}
+.btn-inregistrare {
+    display: inline-block;
+    background: #ff4500;
+    color: rgb(56, 21, 21);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-inregistrare:hover {
+    background: #3b1102;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puma - Ghetele Performante</title>
+    <link rel="stylesheet" href="css\puma.css">
+</head>
+</header>
+<body>
+    <nav>
+        <div class="menu-container">
+            <div class="menu-logo">
+                <a href="index.php">
+                    <img src="https://avatars.mds.yandex.net/i?id=2294261ab123758c4348dfc628096761dbe3fd9a-9223201-images-thumbs&n=13" alt="Logo">
+                </a>
+            </div>
+            <ul class="menu-list">
+                <li><a href="index.php">Acasă</a></li>
+                <li><a href="nike.php">Nike</a></li>
+                <li><a href="adidas.php">Adidas</a></li>
+                <li><a href="puma.php">Puma</a></li>
+                <li><a href="reebok.php">Reebok</a></li>
+                <li><a href="new_balance.php">New Balance</a></li>
+            </ul>
+            <a href="register-page.php" class="btn-inregistrare">Înregistrează-te</a>
+            <button id="theme-toggle">🌙 Schimbă Tema</button>
+        </div>
+    </nav> 
+</header>
+<div class="content-container">
+    <div class="company-text">
+        <h1>Ghete Puma</h1>
+        <p>Puma este un brand renumit care și-a câștigat locul în industria sportului și a modei datorită stilului său inconfundabil și tehnologiilor inovative. Înființată în 1948 în Germania, Puma a devenit un competitor important al altor branduri legendare, fiind cunoscută pentru colaborările sale cu sportivi de top din diverse discipline, precum fotbal, atletism și baschet. Puma a adus un suflu nou în industrie printr-un mix perfect între performanță și modă.</p>
+        <p>Ghetele Puma sunt apreciate pentru tehnologiile sale avansate, cum ar fi evoKNIT, care oferă confort și flexibilitate printr-un material ușor și respirabil. De asemenea, tehnologia PumaCELL oferă suport și amortizare în zonele critice ale piciorului, făcând ghetele Puma ideale pentru sportivii care practică diferite discipline, de la fotbal la alergare și fitness.</p>
+        <p>De-a lungul decadelor, Puma a creat produse care combină stilul sportiv cu cel urban, devenind nu doar o alegere pentru sportivi, dar și pentru iubitorii de modă. În colaborările sale cu designeri și influenceri, Puma reînvie stilurile retro și le adaptează în tendințele contemporane.</p>
+        <p>Un alt aspect important al brandului Puma este angajamentul față de sustenabilitate, având inițiative de reducere a emisiilor de carbon și utilizarea materialelor reciclate în producerea ghetei.</p>
+    </div>
+    <div class="company-image">
+        <a href="https://us.puma.com/us/en" target="_blank">
+            <img src="https://sneakerhead.ru/images/news/361553/tild3130-3764-4437-b164-303966643462__oformleniyeofisapuma09.jpg" alt="Puma Logo">
+        </a>
+    </div>
+    </div>
+    <div class="company-gallery">
+        <div class="gallery-item">
+            <a href="https://www.puma.com/ignite" target="_blank">
+                <img src="https://avatars.mds.yandex.net/i?id=95aaaa499e3acfef3927adf173aba1e3_l-8334793-images-thumbs&n=13" alt="Puma Ignite">
+            </a>
+            <p>Puma Ignite</p>
+        </div>
+        <div class="gallery-item">
+            <a href="https://www.puma.com/suede" target="_blank">
+                <img src="https://i.ebayimg.com/images/g/NKEAAOSwna9iuvUT/s-l1200.webp" alt="Puma Suede">
+            </a>
+            <p>Puma Suede</p>
+        </div>
+        <div class="gallery-item">
+            <a href="https://www.puma.com/rs-x" target="_blank">
+                <img src="https://avatars.mds.yandex.net/i?id=cc7d6c15a5e55406e8de13ea7ff98430_l-12475925-images-thumbs&n=13" alt="Puma RS-X">
+            </a>
+            <p>Puma RS-X</p>
+        </div>
+        <div class="gallery-item">
+            <a href="https://www.puma.com/speedcat" target="_blank">
+                <img src="https://i.ebayimg.com/images/g/4C4AAOSwT~hfLLi0/s-l1600.jpg" alt="Puma Speedcat">
+            </a>
+            <p>Puma Speedcat</p>
+        </div>
+    </div>
+    <script src="js\puma.js"></script>
+</body>
+</html>

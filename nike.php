@@ -2,26 +2,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Ghete Nike</title>
-    <link rel="stylesheet" href="backgorund.css">
+    <link rel="stylesheet" href="css\nike.css">
 </head>
+<header>
 <body>
-    <!-- Meniul de navigare -->
     <nav>
         <div class="menu-container">
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="menu-logo">
-                <img src="https://avatars.mds.yandex.net/i?id=2294261ab123758c4348dfc628096761dbe3fd9a-9223201-images-thumbs&n=13" alt="Logo">
-            </label>
-            <ul class="dropdown-menu">
-                <li><a href="index.html">Acasă</a></li>
-                <li><a href="nike.html">Nike</a></li>
-                <li><a href="adidas.html">Adidas</a></li>
-                <li><a href="puma.html">Puma</a></li>
-                <li><a href="reebok.html">Reebok</a></li>
-                <li><a href="new_balance.html">New Balance</a></li>
+            <div class="menu-logo">
+                <a href="index.php">
+                    <img src="https://avatars.mds.yandex.net/i?id=2294261ab123758c4348dfc628096761dbe3fd9a-9223201-images-thumbs&n=13" alt="Logo">
+                </a>
+            </div>
+            <ul class="menu-list">
+                <li><a href="index.php">Acasă</a></li>
+                <li><a href="nike.php">Nike</a></li>
+                <li><a href="adidas.php">Adidas</a></li>
+                <li><a href="puma.php">Puma</a></li>
+                <li><a href="reebok.php">Reebok</a></li>
+                <li><a href="new_balance.php">New Balance</a></li>
             </ul>
+            <a href="register-page.php" class="btn-inregistrare">Înregistrează-te</a>
+            <button id="theme-toggle">🌙 Schimbă Tema</button>
         </div>
     </nav>
+    </header>
+    <div class="content-container">
     <div class="company-text">
         <h1>Ghete Nike</h1>
         <p>Nike este mai mult decât un simplu brand; este un simbol al performanței, inovației și stilului. Fondat în 1964 sub numele de Blue Ribbon Sports de către Bill Bowerman și Phil Knight, Nike a devenit lider mondial în domeniul echipamentelor sportive. Compania a revoluționat industria încălțămintei sportive prin introducerea de tehnologii avansate, cum ar fi Air Max, Zoom Air, Flyknit și React, care au transformat felul în care sportivii și amatorii de sport se simt și performează în timpul antrenamentelor și competițiilor.</p>
@@ -34,20 +39,33 @@
             <img src="https://avatars.mds.yandex.net/i?id=47c811be71c0197a7fa2477b902a7eb6-3593759-images-thumbs&n=13" alt="Nike">
         </a>
     </div>
-    <!-- Galeria de imagini plasată mult mai jos decât tot textul -->
-<div class="company-gallery">
-    <a href="https://www.nike.com/air-force-1" target="_blank">
-        <img src="https://avatars.mds.yandex.net/i?id=866d959d6c2b7c4dcb0f8f9c66db265cf784d4d3-12632677-images-thumbs&n=13" alt="Nike Air Force 1">
-    </a>
-    <a href="https://www.nike.com/air-max" target="_blank">
-        <img src="https://avatars.mds.yandex.net/i?id=e3ad6f8c4a4c4f485da2e9fcf06ee4109dbda0ae-12421657-images-thumbs&n=13" alt="Nike Air Max">
-    </a>
-    <a href="https://www.nike.com/jordan" target="_blank">
-        <img src="https://avatars.mds.yandex.net/i?id=0ec061cb81bc634e14a508de24a8744fb1c3fb28-9181211-images-thumbs&n=13" alt="Nike Jordan">
-    </a>
-    <a href="https://www.nike.com/dunk" target="_blank">
-        <img src="https://avatars.mds.yandex.net/i?id=0d950277fa65cc1c9ca2966e93a8109e_l-6962773-images-thumbs&n=13" alt="Nike Dunk">
-    </a>
-</div>
+    </div>  
+    <div class="company-gallery">
+        <div class="gallery-item">
+            <a href="https://stockx.com/nike-air-force-1-low-tiffany-co-1837-friends-and-family" target="_blank">
+                <img src="https://avatars.mds.yandex.net/i?id=866d959d6c2b7c4dcb0f8f9c66db265cf784d4d3-12632677-images-thumbs&n=13" alt="Nike Air Force 1">
+            </a>
+            <p>Nike Air Force 1 - Clasic și elegant</p>
+        </div>
+        <div class="gallery-item">
+            <a href="https://www.nike.com/air-max" target="_blank">
+                <img src="https://cdn.flightclub.com/TEMPLATE/803587/1.jpg" alt="Nike Air Max">
+            </a>
+            <p>Nike Air Max - Confort și tehnologie</p>
+        </div>
+        <div class="gallery-item">
+            <a href="https://stockx.com/air-jordan-1-high-og-sp-fragment-design-x-travis-scott" target="_blank">
+                <img src="https://cdn1.ozone.ru/s3/multimedia-e/6449081294.jpg" alt="Nike Jordan">
+            </a>
+            <p>Nike Jordan - Legenda baschetului</p>
+        </div>
+        <div class="gallery-item">
+            <a href="https://stockx.com/nike-dunk-sb-low-mummy" target="_blank">
+                <img src="https://avatars.mds.yandex.net/i?id=0d950277fa65cc1c9ca2966e93a8109e_l-6962773-images-thumbs&n=13" alt="Nike Dunk">
+            </a>
+            <p>Nike Dunk - Stil urban iconic</p>
+        </div>
+    </div>   
+    <script src="js\nike.js"></script> 
 </body>
 </html>
